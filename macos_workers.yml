@@ -1,0 +1,9 @@
+persistent_worker_macos_task_template: &macos_task_template
+  env:
+    PLATFORM: macos
+  persistent_worker:
+    isolation:
+      tart:
+        image: $IMAGE
+        user: admin
+        password: admin

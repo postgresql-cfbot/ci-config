@@ -32,6 +32,18 @@ gce_freebsd_task_template: &freebsd_task_template
   <<: *gce_instance_template
 
 
+gce_netbsd_task_template: &netbsd_task_template
+  env:
+    PLATFORM: netbsd
+  <<: *gce_instance_template
+
+
+gce_openbsd_task_template: &openbsd_task_template
+  env:
+    PLATFORM: openbsd
+  <<: *gce_instance_template
+
+
 gce_windows_task_template: &windows_task_template
   env:
     PLATFORM: windows

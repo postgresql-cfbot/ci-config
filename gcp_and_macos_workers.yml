@@ -5,7 +5,7 @@ gcp_credentials:
 
 # Defaults
 gce_instance:
-  type: t2d-standard-4
+  type: t2d-standard-8
   spot: true
   zone: us-west1-a
   use_ssd: true
@@ -18,6 +18,10 @@ gce_instance_template: &gce_instance_template
     platform: $PLATFORM
     disk: $DISK_SIZE
     platform: $PLATFORM
+  env:
+    CPUS: 8
+    BUILD_JOBS: 16
+    TEST_JOBS: 16
 
 
 gce_linux_task_template: &linux_task_template

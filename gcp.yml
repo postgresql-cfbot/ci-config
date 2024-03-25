@@ -20,8 +20,8 @@ gce_instance_template: &gce_instance_template
     platform: $PLATFORM
   env:
     CPUS: 8
-    BUILD_JOBS: 16
-    TEST_JOBS: 16
+    BUILD_JOBS: 8
+    TEST_JOBS: 8
 
 
 gce_linux_task_template: &linux_task_template
